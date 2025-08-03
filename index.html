@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RailXperience</title>
+  </head>
+  <style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    background-color: #EFE1D1;
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    width: 100%;
+    height: 13rem;
+    background-color: #3F2E3E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-logo{
+    width: 50%;
+    height: 12rem;
+    background-color:#3F2E3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 18%;
+    height: 10rem;
+    border-radius: 1.5rem;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.title{
+    width: 25%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title p{
+    font-size: 6rem;
+    font-weight: 700;
+    color: #B9B4C7;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.nav-bar{
+    width: 28%;
+    height: 8rem;
+    background-color: #A78295;
+    border-radius: 1.5rem;
+
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li{
+    list-style: none;
+    margin: 2.5rem;
+}
+
+.nav-bar ul li a {
+    position: relative;
+    font-size: 2.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+
+.nav-bar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 0%;
+    height: 2px;
+    background-color: #331D2C;
+    transition: width 0.3s linear;
+}
+
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    width: 90%;
+    height: 60rem;
+    background-color:#b996ab;
+    border-radius: 6rem; 
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.hero-content{
+    width: 55%;
+    height: 50rem;
+}
+.hero-img{
+    width: 35%;
+    height: 40rem;
+    border: 0.5rem #3F2E3E solid;
+    border-radius: 6rem; 
+}
+
+.hero-img{
+    background-image: url('https://www.constructionweekonline.in/cloud/2021/11/25/GmunDlje-Indian-Railways-6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero-content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+}
+
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 5rem;
+    padding-top: 8rem;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    background-color: #3F2E3E;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons a:hover {
+    background-color: #5c3c56;
+    transform: scale(1.10);
+}
+
+.purpose{
+    width: 90%;
+    height: 80rem;
+    background-color: #EFE1D1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem
+}
+
+.purpose-head{
+    width: 50%;
+    height: 12%;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+.purpose-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+.purpose-body{
+    width: 90%;
+    height: 70%;
+    background-color: #D8B9C3;
+    border: 0.5rem #3F2E3E solid;
+    border-radius: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.purpose1,.purpose2,.purpose3{
+    width: 30%;
+    height: 85%;
+    gap: 2.5rem;
+}
+
+.img1,.img2,.img3{
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    margin: 2rem auto;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.img1{
+background-image: url('https://as1.ftcdn.net/v2/jpg/06/46/37/04/1000_F_646370472_by6Z8xzT35r6yqEWTvoQgnNG2x4d2mdz.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img2{
+background-image: url('https://thumbs.dreamstime.com/b/user-reviews-online-customer-feedback-review-experience-rating-concept-user-client-service-message-user-reviews-online-customer-147323928.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img3{
+    background-image: url('https://trustmary.com/wp-content/uploads/2022/05/review-stats-1-791x1024.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.imfo1,.imfo2,.imfo3{
+    width: 90%;
+    height: 10rem;
+    background-color: #D8B9C3;
+    margin: 2rem auto;
+}
+
+.imfo1 p,.imfo2 p,.imfo3 p{
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+}
+
+.train-layout{
+    width: 95%;
+    height: 70rem;
+    background-color: #EFE1D1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.train-head{
+    width: 95%;
+    height: 10rem;
+    background-color: #A78295;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+
+
+.boggie{
+    width: 95%;
+    height: 50rem;
+    background-color: #b996ab;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-left: 0.5rem #3F2E3E solid;
+    border-right: 0.5rem #3F2E3E solid;
+    border-bottom: 0.5rem #3F2E3E solid;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+
+
+
+
+.target1,.target2,.target3{
+    width: 25%;
+    height: 80%;
+    background-color: #b996ab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.train-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+}
+
+.target-img1,.target-img2,.target-img3{
+    width: 95%;
+    height: 60%;
+    border-radius: 5rem;
+    border:0.5rem #331D2C solid;
+}
+
+.target-img1{
+    background-image: url('https://www.travelandleisure.com/thmb/PdC77BTplEvKvAscQXZXc3q8BWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/train-passenger-windows-TRAINMISTAKES0820-88b7aa7a172f45f881a2944ad637298f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.target-img2{
+    background-image: url('https://t3.ftcdn.net/jpg/06/72/55/64/360_F_672556497_YZW1aibs9MYIRFEZwn5faNvPtaplioBR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.target-img3{
+    background-image: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1FTH2a.img?w=768&h=432&m=6');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.target-imfo1,.target-imfo2,.target-imfo3{
+    width: 95%;
+    height: 40%;
+    background-color: #b996ab;
+}
+
+.target-imfo1 p,.target-imfo2 p,.target-imfo3 p{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+}
+
+.target-imfo1 h2,.target-imfo2 h2,.target-imfo3 h2{
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.target1,
+.target2,
+.target3 {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transition: transform 0.3s ease;
+}
+
+.target1 {
+  animation-delay: 0.2s;
+}
+.target2 {
+  animation-delay: 0.4s;
+}
+.target3 {
+  animation-delay: 0.6s;
+}
+
+
+.footer-content{
+    width: 100%;
+    height: 8rem;
+    background-color: #3F2E3E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+  </style>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="nav-logo">
+          <div class="logo"></div>
+          <div class="title"><p>RailXperience</p></div>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="train-explorer.html" target="_blank">train explorer</a></li>
+            <li><a href="ShareExp.html" target="_blank">share experience</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-sec">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>
+              Experience Indian Railways Through Real Stories & Smart Travel
+            </h1>
+            <p>
+              Welcome to RailXperience — your gateway to smarter train travel.
+              Explore detailed train information, honest reviews, and real
+              passenger experiences. Plan better journeys and share your own
+              stories to help fellow travelers on the move. Let’s make every
+              ride more comfortable, informed, and memorable — together!
+            </p>
+            <div class="cta-buttons">
+              <a href="train-explorer.html" target="_blank">Explore Trains</a>
+              <a href="ShareExp.html" target="_blank">Share Experience</a>
+            </div>
+          </div>
+          <div class="hero-img"></div>
+        </div>
+      </section>
+
+      <section class="purpose-sec">
+        <div class="purpose">
+          <div class="purpose-head">
+            <p>Why Use Our Platform ?</p>
+          </div>
+          <div class="purpose-body">
+            <div class="purpose1">
+              <div class="img1"></div>
+              <div class="imfo1">
+                <p>Explore Train Info</p>
+                <p>Routes, schedules, ratings</p>
+              </div>
+              <div></div>
+            </div>
+            <div class="purpose2">
+              <div class="img2"></div>
+              <div class="imfo2">
+                <p>Write & Read Reviews</p>
+                <p>Real experiences from real passengers</p>
+              </div>
+            </div>
+            <div class="purpose3">
+              <div class="img3"></div>
+              <div class="imfo3">
+                <p>View Ratings & Stats</p>
+                <p>On-time performance, cleanliness, etc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="train-layout">
+        <div class="train-head">
+          <p>Who is RailXperience For?</p>
+        </div>
+        <div class="boggie">
+          <div class="target1">
+            <div class="target-img1"></div>
+            <div class="target-imfo1">
+              <h2>Distance Riders</h2>
+              <p>
+                Make smarter travel decisions with train ratings, routes, and
+                on-time data
+              </p>
+            </div>
+          </div>
+          <div class="target2">
+            <div class="target-img2"></div>
+            <div class="target-imfo2">
+              <h2>Families & Seniors</h2>
+              <p>
+                Find clean, safe, and comfortable journeys based on real
+                passenger reviews
+              </p>
+            </div>
+          </div>
+          <div class="target3">
+            <div class="target-img3"></div>
+            <div class="target-imfo3">
+              <h2>Rail Enthusiasts</h2>
+              <p>
+                Explore trains, discover scenic routes, and connect with fellow
+                railfans.
+              </p>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+    </main>
+    <footer class="footer-sec">
+      <div class="footer-content">
+      <p>© 2025 RailXperience. All rights reserved.</p>
+      </div>
+      
+    </footer>
+  </body>
+</html>

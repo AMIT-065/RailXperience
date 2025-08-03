@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train Explorer</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    background-color: #EFE1D1;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav-logo{
+    width: 100%;
+    height: 13rem;
+    background-color:#3F2E3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo1,.logo2{
+    width: 10%;
+    height: 10rem;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    
+}
+
+.logo1{
+    background-image: url('logo.png');
+}
+.logo2{
+    background-image: url('https://img.freepik.com/premium-vector/maharashtra-day-vector-illustration-maharashtra-day_709546-557.jpg');
+}
+.title{
+    width: 30%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2{
+    font-size: 6rem;
+    font-weight: 700;
+    color: #B9B4C7;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.5rem;
+}
+.title p{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    font-family: "urbanist", sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.selection{
+    width: 85%;
+    height:10rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-size: 4rem;
+    color: #3F2E3E;
+    font-weight: 700;
+    gap: 2rem;
+}
+select{
+    height: 6rem;
+    width: 75%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    border: 0.25rem solid #3F2E3E;
+    border-radius: 1rem;
+    background-color: #D8B9C3;
+    margin-top: 0.5rem;
+}
+
+.train1{
+    width: 80%;
+    height: 155rem;
+    background-color: #b996ab;
+    display: grid;
+    grid-template-rows: 35rem 35rem 80rem;
+    margin: 2rem auto;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train1-head{
+    width: 60%;
+    height: 10rem;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    margin: 2rem auto;
+}
+.train1-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+.train1-img,.train1-imfo,.train1-route{
+    background-color: #b996ab;
+    margin: 2rem;
+    
+}
+
+.train1-imfo
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.train1-imfo1,.train1-imfo2{
+
+    background-color:#D8B9C3;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+    
+}
+
+.train1-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1{
+    width: 60%;
+    height: 30rem;
+    background-image: url('https://st.indiarailinfo.com/kjfdsuiemjvcya24/0/4/0/0/5613400/0/202301191428240346644283.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train1-route{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route1{
+    width: 60%;
+    height: 80rem;
+    background-image: url('CrRoute.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+
+.train1-imfo1 p,.train1-imfo2 p,.train1-imfo1 a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    margin:1rem;
+
+}
+.train1-imfo1 a{
+    color: rgb(65, 65, 208);
+}
+
+
+.train2-head{
+    width: 60%;
+    height: 10rem;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    margin: 2rem auto;
+}
+.train2-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+
+.train2{
+    width: 80%;
+    height: 125rem;
+    background-color: #b996ab;
+    display: grid;
+    grid-template-rows: 35rem 35rem 50rem;
+    margin: 2rem auto;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train2-img,.train2-imfo,.train2-route{
+    background-color: #b996ab;
+    margin: 2rem;
+    
+}
+
+.train2-imfo
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.train2-imfo1,.train2-imfo2{
+
+    background-color:#D8B9C3;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+    
+}
+
+.train2-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2{
+    width: 60%;
+    height: 30rem;
+    background-image: url('https://st.indiarailinfo.com/kjfdsuiemjvcya24/0/4/6/2/5444462/0/202208101517015748808.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 5rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train2-route{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route2{
+    width: 70%;
+    height: 50rem;
+    background-image: url('ShatabdiRoute.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+
+.train2-imfo1 p,.train2-imfo2 p,.train2-imfo1 a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    margin:1rem;
+
+}
+.train2-imfo1 a{
+    color: rgb(65, 65, 208);
+}
+
+.train3-head{
+    width: 60%;
+    height: 10rem;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    margin: 2rem auto;
+}
+.train3-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+.train3{
+    width: 80%;
+    height: 155rem;
+    background-color: #b996ab;
+    display: grid;
+    grid-template-rows: 35rem 35rem 80rem;
+    margin: 2rem auto;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train3-img,.train3-imfo,.train3-route{
+    background-color: #b996ab;
+    margin: 2rem;
+    
+}
+
+.train3-imfo
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.train3-imfo1,.train3-imfo2{
+
+    background-color:#D8B9C3;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+    
+}
+
+.train3-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img3{
+    width: 60%;
+    height: 30rem;
+    background-image: url('https://st.indiarailinfo.com/kjfdsuiemjvcya23/0/4/4/3/6659443/0/img8852209863.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train3-route{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route3{
+    width: 70%;
+    height: 80rem;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fc/Maharashtra_Express_%28Gondia_-_Kolhapur%29_route_map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+
+.train3-imfo1 p,.train3-imfo2 p,.train3-imfo1 a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    margin:1rem;
+
+}
+.train3-imfo1 a{
+    color: rgb(65, 65, 208);
+}
+
+
+.train4-head{
+    width: 60%;
+    height: 10rem;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    margin: 2rem auto;
+}
+.train4-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+
+.train4{
+    width: 80%;
+    height: 125rem;
+    background-color: #b996ab;
+    display: grid;
+    grid-template-rows: 35rem 35rem 50rem;
+    margin: 2rem auto;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train4-img,.train4-imfo,.train4-route{
+    background-color: #b996ab;
+    margin: 2rem;
+    
+}
+
+.train4-imfo
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.train4-imfo1,.train4-imfo2{
+
+    background-color:#D8B9C3;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+    
+}
+
+.train4-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img4{
+    width: 60%;
+    height: 30rem;
+    background-image: url('https://st2.indiarailinfo.com/kjfdsuiemjvcya4/0/9/4/2/5408942/0/5605c89b36304c5798f86b539c98f6702813363.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train4-route{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route4{
+    width: 80%;
+    height: 50rem;
+    background-image: url('HWHDuronto.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-position: center;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+
+.train4-imfo1 p,.train4-imfo2 p,.train4-imfo1 a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    margin:1rem;
+
+}
+.train4-imfo1 a{
+    color: rgb(65, 65, 208);
+}
+
+.train5-head{
+    width: 60%;
+    height: 10rem;
+    background-color:#b996ab;
+    border: 0.5rem #3F2E3E solid;
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    margin: 2rem auto;
+}
+.train5-head p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    padding-top:2rem ;
+    
+}
+.train5{
+    width: 80%;
+    height: 125rem;
+    background-color: #b996ab;
+    display: grid;
+    grid-template-rows: 35rem 35rem 50rem;
+    margin: 2rem auto;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train5-img,.train5-imfo,.train5-route{
+    background-color: #b996ab;
+    margin: 2rem;
+    
+}
+
+.train5-imfo
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.train5-imfo1,.train5-imfo2{
+
+    background-color:#D8B9C3;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+    
+}
+
+.train5-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img5{
+    width: 60%;
+    height: 30rem;
+    background-image: url('https://st.indiarailinfo.com/kjfdsuiemjvcya22/0/9/5/8/5615958/0/cc5d1af24b24465b93d47c54f37170df5190469.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-radius: 5rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+.train5-route{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route5{
+    width: 50%;
+    height: 50rem;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a8/%28Mumbai_-_Pune%29_Express_trains_route_map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-position: center;
+    border-radius: 4rem;
+    border: 0.5rem #3F2E3E solid;
+}
+
+
+.train5-imfo1 p,.train5-imfo2 p,.train5-imfo1 a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    margin:1rem;
+
+}
+.train5-imfo1 a{
+    color: rgb(65, 65, 208);
+}
+
+
+.footer-content{
+    width: 100%;
+    height: 8rem;
+    background-color: #3F2E3E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+  </style>
+  <body>
+    <header>
+      <div class="nav-logo">
+        <div class="logo1"></div>
+        <div class="title">
+          <h2>Train Explorer</h2>
+          <p>Maharashtra</p>
+        </div>
+        <div class="logo2"></div>
+      </div>
+    </header>
+    <main>
+      <section class="train-sec">
+        <div class="selection">
+          <label for="filterTrain" class="filter"><p>Select Train</p></label>
+          <select id="filterTrain">
+            <option value="">All Trains</option>
+            <option value="t1">CR Rajdhani</option>
+            <option value="t2">Secundarabad Shatabdi</option>
+            <option value="t3">Maharashtra Express</option>
+            <option value="t4">Mumbai-Howrah Duronto</option>
+            <option value="t5">Deccan Queen</option>
+          </select>
+        </div>
+        
+
+        <div class="train1-head" id="t1">
+          <p>Flagship Rajdhani: Mumbai to Delhi in Style</p>
+        </div>
+        <div class="train1">
+          <div class="train1-img">
+            <div class="img1"></div>
+          </div>
+          <div class="train1-imfo">
+            <div class="train1-imfo1">
+              <p>Train Name : CR Rajdhani</p>
+              <p>Train No : 22221/22222</p>
+              <p>Train Type : Rajdhani Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>
+                Available Classes: First AC (1A), Second AC (2A), Third AC (3A)
+              </p>
+              <a href="CRschedule.png" download>Download Schedule</a>
+            </div>
+
+            <div class="train1-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Hazrat Nizamuddin</p>
+              <p>Departure: 16:00</p>
+              <p>Arrival: 09:55 (following day)</p>
+              <p>No. of stops: 8</p>
+              <p>Avg Speed: ~86 km/h</p>
+              <p>Max Speed: 130 km/h</p>
+            </div>
+          </div>
+          <div class="train1-route">
+            <div class="route1"></div>
+          </div>
+        </div>
+        <div class="train2-head" id="t2">
+          <p>Morning Shatabdi: Fastest Link to Secunderabad</p>
+        </div>
+        <div class="train2">
+          <div class="train2-img">
+            <div class="img2"></div>
+          </div>
+          <div class="train2-imfo">
+            <div class="train2-imfo1">
+              <p>Train Name : Pune – Secunderabad Shatabdi</p>
+              <p>Train No : 12025/12026</p>
+              <p>Train Type : Shatabdi Express</p>
+              <p>Operated By : South Central Railways</p>
+              <p>
+                Available Classes: Executive Chair Car (EC), AC Chair Car (CC)
+              </p>
+              <a href="ShatabdiSchedule.png" download>Download Schedule</a>
+            </div>
+
+            <div class="train2-imfo2">
+              <p>Pune Junction → Secunderabad Junction</p>
+              <p>Departure: 06:00</p>
+              <p>Arrival: 14:25</p>
+              <p>No. of stops: 5</p>
+              <p>Avg Speed: ~64 km/h</p>
+              <p>Max Speed: 110 km/h</p>
+            </div>
+          </div>
+
+          <div class="train2-route">
+            <div class="route2"></div>
+          </div>
+        </div>
+        <div class="train3-head" id="t3">
+          <p>The Long-Haul Connect: Maharashtra from East to West</p>
+        </div>
+        <div class="train3">
+          <div class="train3-img">
+            <div class="img3"></div>
+          </div>
+          <div class="train3-imfo">
+            <div class="train3-imfo1">
+              <p>Train Name : Maharashtra Express</p>
+              <p>Train No : 11039/11040</p>
+              <p>Train Type : Mail/Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>
+                Available Classes: Sleeper (SL), Second AC (2A), Third AC (3A),
+                General (GN)
+              </p>
+              <a href="MHSchedule.pdf" download>Download Schedule</a>
+            </div>
+
+            <div class="train3-imfo2">
+              <p>Gondia Junction → Kolhapur SCSMT</p>
+              <p>Departure: 10:15</p>
+              <p>Arrival: 14:45 (next day)</p>
+              <p>No. of stops: 59</p>
+              <p>Avg Speed: ~45 km/h</p>
+              <p>Max Speed: 100 km/h</p>
+            </div>
+          </div>
+
+          <div class="train3-route">
+            <div class="route3"></div>
+          </div>
+        </div>
+        <div class="train4-head" id="t4">
+          <p>Non-Stop Speedster: Mumbai to Kolkata</p>
+        </div>
+        <div class="train4" >
+          <div class="train4-img">
+            <div class="img4"></div>
+          </div>
+          <div class="train4-imfo">
+            <div class="train4-imfo1">
+              <p>Train Name : Mumbai–Howrah Duronto Express</p>
+              <p>Train No : 12261/12262</p>
+              <p>Train Type : Duronto Express</p>
+              <p>Operated By : South Eastern Railway (SER).</p>
+              <p>
+                Available Classes: First AC (1A), Second AC (2A), Third AC (3A)
+              </p>
+              <a href="HWHDurontoSchedule.png" download>Download Schedule</a>
+            </div>
+
+            <div class="train4-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Howrah Junction</p>
+              <p>Departure: 17:15</p>
+              <p>Arrival: 20:15 (next day)</p>
+              <p>No. of stops: 6</p>
+              <p>Avg Speed: ~70 km/h</p>
+              <p>Max Speed: 130 km/h</p>
+            </div>
+          </div>
+
+          <div class="train4-route">
+            <div class="route4"></div>
+          </div>
+        </div>
+        <div class="train5-head" id="t5">
+          <p>Legacy on Rails: The Iconic Mumbai–Pune Deccan Queen</p>
+        </div>
+        <div class="train5">
+          <div class="train5-img">
+            <div class="img5"></div>
+          </div>
+          <div class="train5-imfo">
+            <div class="train5-imfo1">
+              <p>Train Name : Deccan Queen</p>
+              <p>Train No : 12123/12124</p>
+              <p>Train Type : Intercity/Superfast Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>
+                Available Classes: Second Sitting (2S), AC Chair Car (CC),
+                Vistadome (EV)
+              </p>
+              <a href="QueenSchedule.png" download>Download Schedule</a>
+            </div>
+
+            <div class="train5-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Pune Junction</p>
+              <p>Departure: 17:10</p>
+              <p>Arrival: 20:25</p>
+              <p>No. of stops: 4</p>
+              <p>Avg Speed: ~59 km/h</p>
+              <p>Max Speed: 105 km/h</p>
+            </div>
+          </div>
+
+          <div class="train5-route">
+            <div class="route5"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-sec">
+      <div class="footer-content">
+        <p>© 2025 RailXperience. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("filterTrain").addEventListener("change", function () {
+    const selectedId = this.value;
+    if (selectedId) {
+      const targetSection = document.getElementById(selectedId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>

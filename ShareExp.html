@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Experience</title>
+    
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    background-color: #EFE1D1;
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav-logo{
+    width: 100%;
+    height: 13rem;
+    background-color:#3F2E3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo1,.logo2{
+    width: 10%;
+    height: 10rem;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    
+}
+
+.logo1{
+    background-image: url('logo.png');
+}
+.logo2{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS03tuh4DHrc5MgLoWrVeQxkqJghQuUNyjm6pmNctsrUhJZj_NaoJUnuzsa_Mwr4xTh4_0&usqp=CAU');
+}
+.title{
+    width: 30%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2{
+    font-size: 6rem;
+    font-weight: 700;
+    color: #B9B4C7;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.5rem;
+}
+.title p{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    font-family: "urbanist", sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.Exp{
+    width: 55%;
+    height: auto;
+    background-color: #A78295;
+    margin: 2rem auto;
+    border: 0.5rem #3F2E3E solid;
+    border-radius: 4rem;
+}
+
+form, fieldset {
+    font-family: "Urbanist", sans-serif;
+    font-size: 3rem;
+    color: #3F2E3E;
+    border: none;
+    width: 100%;
+    padding: 2rem;
+}
+
+fieldset legend {
+    font-size:5rem;
+    font-weight: bold;
+    color: #3F2E3E;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    height: 6rem;
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0.25rem solid #3F2E3E;
+    border-radius: 1rem;
+    background-color: #D8B9C3;
+    margin-top: 0.5rem;
+}
+
+
+
+input[type="number"]{
+    width: 20%;
+    height: 6rem;
+}
+
+input[type="radio"] {
+    margin: 2rem;
+    transform: scale(1.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+button {
+    width: 20%;
+    height: 8rem;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: #3F2E3E;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 0.5rem #D8B9C3 solid;
+    
+}
+
+button:hover {
+    background-color: #D8B9C3;
+    color: #331D2C;
+    border: 0.5rem #331D2C solid;
+}
+
+
+
+      .review-heading {
+  width: 70%;
+  height: 8rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: #b996ab;
+  border: 0.5rem #3F2E3E solid;
+}
+
+.review-heading p,.filter p {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  font-family: "urbanist", sans-serif;
+  font-weight: 700;
+  padding:1rem;
+
+}
+
+
+.review-main {
+  width: 70%;
+  margin: 1rem auto;
+  background-color: #b996ab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 0.5rem #3F2E3E solid;
+}
+
+.review-card {
+  width:100%;
+  height: auto;
+  background-color: #D8B9C3;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  border: 0.4rem #3F2E3E solid;
+}
+
+.review-card p{
+
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    margin: 1.5rem;
+}
+
+
+.review-card figure {
+  margin: 0 auto;
+}
+
+.review-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #3F2E3E;
+}
+
+.review-card figcaption {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.footer-content{
+    width: 100%;
+    height: 8rem;
+    background-color: #3F2E3E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+  </style>
+  <body>
+    <header>
+      <div class="nav-logo">
+        <div class="logo1"></div>
+        <div class="title">
+          <h2>Share Experience</h2>
+          <p>Your stories help others</p>
+        </div>
+        <div class="logo2"></div>
+      </div>
+    </header>
+    <main>
+      <div class="Exp">
+        <div class="form">
+          <form id="reviewForm">
+            <fieldset>
+            <legend>feedback form</legend>
+
+            <label for="Name">Name</label>
+            <input
+              type="text"
+              name="Name"
+              placeholder="Enter Your Name"
+              id="Name"
+            />
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="Male" id="gen1" />Male
+            <input type="radio" name="gender" value="Female" id="gen2" />Female
+            <input type="radio" name="gender" value="Others" id="gen3" />Others
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your Email"
+              id="email"
+            />
+
+            <label>Train</label><br>
+            <input type="radio" name="train" value="CR Rajdhani" id="train1" /> CR Rajdhani
+            <input type="radio" name="train" value="Secundarabad Shatabdi" id="train2" /> Secundarabad Shatabdi
+            <input type="radio" name="train" value="Maharashtra Express" id="train3" /> Maharashtra Express
+            <input type="radio" name="train" value="Mumbai-Howrah Duronto" id="train4" /> Mumbai-Howrah Duronto
+            <input type="radio" name="train" value="Deccan Queen" id="train5" /> Deccan Queen
+
+
+            <label for="Travel Class">Travel Class</label>
+            <select name="class" id="class">
+              <option value="general">General</option>
+              <option value="Sleeper">Sleeper</option>
+              <option value="AC 3 Tier">AC 3 Tier</option>
+              <option value="AC 2 Tier">AC 2 Tier</option>
+              <option value="AC 1 Tier">AC 1 Tier</option>
+            </select>
+
+            <label for="date">Travel Date</label>
+            <input type="date" name="date" id="date" />
+
+            <label for="cleanliness">cleanliness</label>
+            <input type="number" name="cleanNum" id="" min="1" max="5" />
+
+            <label for="Punctuality">Punctuality</label>
+            <input type="number" name="PunctualityNum" id="" min="1" max="5" />
+
+            <label for="Staff Behavior">Staff Behavior</label>
+            <input type="number" name="staffNum" id="" min="1" max="5" />
+
+            <label for="Food Quality">Food Quality</label>
+            <input type="number" name="foodNum" id="" min="1" max="5" />
+
+            <label for="feedback">Your Feedback:</label>
+
+            <textarea
+              id="feedback"
+              name="feedback"
+              rows="5"
+              cols="40"
+              placeholder="Type your message here..."
+            ></textarea>
+
+            <div class="btn" id="submitBtn"><button>Submit</button></div>
+          </fieldset>
+          </form>
+          
+        </div>
+      </div>
+
+      
+
+      <section class="Reviews-sec">
+  <div class="review-heading">
+    <p class="urbanist">RailXperiences</p>
+  </div>
+
+  
+  
+  <div class="review-main" id="reviewContainer">
+
+      <label for="filterTrain" class="filter"><p>Filter by Train</p></label>
+ <select id="filterTrain">
+  <option value="All">All Trains</option>
+  <option value="CR Rajdhani">CR Rajdhani</option>
+  <option value="Secundarabad Shatabdi">Secundarabad Shatabdi</option>
+  <option value="Maharashtra Express">Maharashtra Express</option>
+  <option value="Mumbai-Howrah Duronto">Mumbai-Howrah Duronto</option>
+  <option value="Deccan Queen">Deccan Queen</option>
+ </select>
+    <!-- JS will inject reviews here -->
+  </div>
+</section>
+    </main>
+    <footer class="footer-sec">
+      <div class="footer-content">
+      <p>© 2025 RailXperience. All rights reserved.</p>
+      </div>
+      
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const submitBtn = document.getElementById("submitBtn");
+
+  submitBtn.addEventListener("click", () => {
+    // Collect input values
+    const name = document.getElementById("Name").value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+    const email = document.getElementById("email").value;
+    const train = document.querySelector('input[name="train"]:checked')?.value;
+    const travelClass = document.getElementById("class").value;
+    const travelDate = document.getElementById("date").value;
+    const cleanliness = document.querySelector('input[name="cleanNum"]').value;
+    const punctuality = document.querySelector('input[name="PunctualityNum"]').value;
+    const staff = document.querySelector('input[name="staffNum"]').value;
+    const food = document.querySelector('input[name="foodNum"]').value;
+    const feedback = document.getElementById("feedback").value;
+
+    // Validate essential fields
+    if (!name || !gender || !email || !train || !feedback) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Create review object
+    const review = {
+      name,
+      gender,
+      email,
+      train,
+      travelClass,
+      travelDate,
+      cleanliness: Number(cleanliness),
+      punctuality: Number(punctuality),
+      staff: Number(staff),
+      food: Number(food),
+      feedback,
+      dateSubmitted: new Date().toISOString()
+    };
+
+    // Store in localStorage
+    const allReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    allReviews.push(review);
+    localStorage.setItem("reviews", JSON.stringify(allReviews));
+
+    alert("Thank you for your feedback!");
+    // Optionally clear the form
+    document.querySelector("form").reset();
+  });
+});
+
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("reviewContainer");
+  const filterSelect = document.getElementById("filterTrain");
+
+  const allReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+  function displayReviews(filteredReviews) {
+    container.querySelectorAll(".review-card").forEach((card) => card.remove());
+
+    filteredReviews.forEach((review) => {
+      const avgRating = ((review.cleanliness + review.punctuality + review.staff + review.food) / 4).toFixed(1);
+
+      const card = document.createElement("div");
+      card.className = "review-card";
+      card.innerHTML = `
+        <figure>
+          <img src="person.png" alt="person" width="120" height="120">
+          <figcaption>${review.name}</figcaption>
+        </figure>
+        <p>
+          ${review.feedback}<br>
+          <strong>Train:</strong> ${review.train}<br>
+          <strong>Rating:</strong> ${"★".repeat(Math.round(avgRating))} (${avgRating}/5)
+        </p>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // Initial display of all reviews
+  displayReviews(allReviews.reverse());
+
+  // Filter logic
+  filterSelect.addEventListener("change", () => {
+    const selectedTrain = filterSelect.value;
+    if (selectedTrain === "All") {
+      displayReviews(allReviews);
+    } else {
+      const filtered = allReviews.filter((review) => review.train === selectedTrain);
+      displayReviews(filtered);
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>
