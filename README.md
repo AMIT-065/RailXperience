@@ -1,46 +1,67 @@
 🚆 RailXperience
-A modern platform for exploring Indian Railways trains and sharing travel experiences through real passenger reviews.
+Indian Railways Experience Platform
+Your gateway to smarter train travel through real passenger stories
 
 🔗 Live Site: https://amit-065.github.io/RailXperience/
 
-✨ Features
-Train Explorer - Browse 5 popular Maharashtra trains with detailed info, routes, and schedules
+📄 Pages Overview
+🏠 Home Page (index.html)
+Purpose: Landing page introducing the platform
 
-Share Experience - Submit feedback forms with ratings and detailed reviews
+Features:
 
-Real Reviews - View passenger experiences with filtering and star ratings
+Hero section with platform introduction
 
-Responsive Design - Works perfectly on all devices
+"Why Use Our Platform" showcase
 
-🛠️ Tech Stack
+Target audience sections (Distance Riders, Families, Rail Enthusiasts)
+
+Call-to-action navigation buttons
+
+🔍 Train Explorer (train-explorer.html)
+Purpose: Detailed train information and exploration
+
+Features:
+
+5 popular Maharashtra trains with complete details
+
+Interactive dropdown filter for quick navigation
+
+Train specifications, schedules, and route maps
+
+Downloadable schedule PDFs/PNGs
+
+Smooth scroll-to-train functionality
+
+💬 Share Experience (ShareExp.html)
+Purpose: Passenger feedback and review system
+
+Features:
+
+Comprehensive feedback form with ratings (1-5 scale)
+
+Multi-category ratings: Cleanliness, Punctuality, Staff Behavior, Food Quality
+
+Real-time review display with filtering
+
+Data persistence using localStorage
+
+Star rating visualization
+
+🛠️ Technical Stack
 Frontend: HTML5, CSS3, JavaScript (ES6+)
-
 Storage: Browser localStorage
-
+Styling: Custom CSS with Grid & Flexbox
 Deployment: GitHub Pages
-
 Design: Custom color scheme & responsive layout
 
 🚂 Featured Trains
-CR Rajdhani (Mumbai-Delhi)
+CR Rajdhani - Mumbai to Delhi flagship service
 
-Secundarabad Shatabdi
+Secundarabad Shatabdi - High-speed daytime train
 
-Maharashtra Express
+Maharashtra Express - Cross-state connectivity
 
-Mumbai-Howrah Duronto
+Mumbai-Howrah Duronto - Non-stop long-distance
 
-Deccan Queen
-
-🎯 Key Features
-Interactive train filtering
-
-Form validation & data persistence
-
-Dynamic review cards with ratings
-
-Smooth navigation & animations
-
-Mobile-first responsive design
-
-Built with ❤️ by Amit Ingle - Computer Engineering Student
+Deccan Queen - Iconic Mumbai-Pune service
