@@ -1,0 +1,354 @@
+/**
+ * Share Experience - Stylesheet
+ * Description: CSS for feedback form and reviews display section
+ * Features: Responsive form design, review cards, filtering system
+ * Author: Amit Ingle
+ * Version: 1.0
+ * Date: 2025
+ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+html {
+    background-color: #EFE1D1; /* Light beige background */
+    font-size: 62.5%; /* Sets 1rem = 10px for easier calculations */
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+}
+
+/* ===== HEADER STYLES ===== */
+.nav-logo {
+    width: 100%;
+    height: auto;
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Vertical and horizontal padding */
+}
+
+/* Logo Styles */
+.logo1, .logo2 {
+    width: 12rem;
+    height: 8rem;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover entire container */
+    background-position: center;
+}
+
+/* Left Logo - RailXperience Brand */
+.logo1 {
+    background-image: url('logo.png');
+}
+
+/* Right Logo */
+.logo2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS03tuh4DHrc5MgLoWrVeQxkqJghQuUNyjm6pmNctsrUhJZj_NaoJUnuzsa_Mwr4xTh4_0&usqp=CAU');
+}
+
+/* Title Section Styles */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #B9B4C7; /* Light purple text */
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.3rem; /* Character spacing */
+    line-height: 1.2; /* Line height for better readability */
+}
+
+.title p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-family: "urbanist", sans-serif;
+    letter-spacing: 0.3rem;
+    margin-top: 0.5rem; /* Space between title and subtitle */
+}
+
+/* ===== FEEDBACK FORM STYLES ===== */
+.Exp {
+    width: 90%;
+    max-width: 80rem; /* Maximum form width */
+    height: auto;
+    background-color: #A78295; /* Medium purple background */
+    margin: 2rem auto; /* Center with top/bottom margin */
+    border: 0.5rem #3F2E3E solid; /* Dark purple border */
+    border-radius: 3rem;
+}
+
+/* Form and Fieldset Styles */
+form, fieldset {
+    font-family: "Urbanist", sans-serif;
+    font-size: 2.2rem;
+    color: #3F2E3E; /* Dark text color */
+    border: none; /* Remove default borders */
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Form Legend (Title) */
+fieldset legend {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #3F2E3E;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1rem; /* Space below title */
+}
+
+/* Form Label Styles */
+label {
+    display: block; /* Make labels block elements */
+    margin-top: 1.5rem; /* Space above labels */
+    font-weight: 600;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 40rem; /* Maximum input width */
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0.25rem solid #3F2E3E; /* Dark purple border */
+    border-radius: 1rem;
+    background-color: #D8B9C3; /* Light pink background */
+    margin-top: 0.5rem; /* Space above inputs */
+}
+
+/* Number Input Specific Styles */
+input[type="number"] {
+    width: 15rem; /* Fixed width for number inputs */
+    height: 5rem;
+}
+
+/* Radio Button Styles */
+input[type="radio"] {
+    margin: 1rem 1rem 1rem 0; /* Right margin for spacing */
+    transform: scale(1.3); /* Slightly larger radio buttons */
+}
+
+/* Radio Button Group Container */
+.radio-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    gap: 1rem; /* Space between radio options */
+    margin-top: 1rem;
+}
+
+/* Textarea Styles */
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 12rem; /* Minimum height */
+}
+
+/* Submit Button Container */
+.btn {
+    display: flex;
+    justify-content: center; /* Center the button */
+}
+
+/* Submit Button Styles */
+button {
+    width: 20rem;
+    height: 6rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    background-color: #3F2E3E; /* Dark purple background */
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    border: 0.4rem #D8B9C3 solid; /* Light pink border */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #D8B9C3; /* Light pink background on hover */
+    color: #331D2C; /* Dark text on hover */
+    border: 0.4rem #331D2C solid; /* Dark border on hover */
+}
+
+/* ===== REVIEWS SECTION STYLES ===== */
+
+/* Reviews Section Header */
+.review-heading {
+    width: 90%;
+    max-width: 100rem; /* Maximum width constraint */
+    height: auto;
+    min-height: 7rem; /* Minimum height */
+    margin: 0 auto;
+    margin-top: 2rem; /* Space above section */
+    background-color: #b996ab; /* Light purple background */
+    border: 0.4rem #3F2E3E solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Review Heading and Filter Text */
+.review-heading p, .filter p {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    font-family: "urbanist", sans-serif;
+    font-weight: 700;
+}
+
+/* Reviews Main Container */
+.review-main {
+    width: 90%;
+    max-width: 100rem;
+    margin: 1rem auto;
+    background-color: #b996ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 0.4rem #3F2E3E solid;
+}
+
+/* Individual Review Card */
+.review-card {
+    width: 100%;
+    height: auto;
+    background-color: #D8B9C3; /* Light pink background */
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0; /* Vertical spacing between cards */
+    border: 0.3rem #3F2E3E solid;
+}
+
+/* Review Card Text */
+.review-card p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: justify; /* Justified text alignment */
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    margin: 1rem 0; /* Vertical spacing */
+    line-height: 1.4; /* Improved readability */
+}
+
+/* Review Card Figure (User Image) */
+.review-card figure {
+    margin: 0 auto; /* Center the figure */
+    text-align: center;
+}
+
+.review-card img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    border: 0.3rem solid #3F2E3E;
+}
+
+/* User Name Caption */
+.review-card figcaption {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-top: 1rem; /* Space above caption */
+    text-align: center;
+}
+
+/* ===== FOOTER STYLES ===== */
+.footer-content {
+    width: 100%;
+    height: auto;
+    min-height: 7rem;
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.footer-content p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIUM SCREENS (768px and below) ===== */
+@media (max-width: 768px) {
+    /* Header mobile adjustments */
+    .nav-logo {
+        padding: 1rem;
+    }
+    
+    .logo1, .logo2 {
+        width: 10rem;
+        height: 6rem;
+    }
+    
+    .title h2 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .title p {
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    /* Form mobile adjustments */
+    .Exp {
+        width: 95%; /* Wider on mobile */
+        border-radius: 2rem; /* Slightly smaller border radius */
+    }
+    
+    form, fieldset {
+        font-size: 1.8rem; /* Smaller font size */
+        padding: 1.5rem; /* Reduced padding */
+    }
+    
+    fieldset legend {
+        font-size: 2.2rem; /* Smaller legend */
+    }
+    
+    /* Input fields mobile adjustments */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 1.4rem; /* Smaller text */
+        max-width: 100%; /* Full width on mobile */
+    }
+}

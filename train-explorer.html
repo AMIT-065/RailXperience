@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="train-explorer.css" />
+    <title>Train Explorer</title>
+  </head>
+  <body>
+    <!-- Header Section with Branding -->
+    <header>
+      <div class="nav-logo">
+        <!-- Left Logo -->
+        <div class="logo1"></div>
+        <!-- Main Title and Subtitle -->
+        <div class="title">
+          <h2>Train Explorer</h2>
+          <p>Maharashtra</p>
+        </div>
+        <!-- Right Logo (Maharashtra Theme) -->
+        <div class="logo2"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Train Selection and Display Section -->
+      <section class="train-sec">
+        <!-- Train Filter Dropdown -->
+        <div class="selection">
+          <label for="filterTrain" class="filter"><p>Select Train</p></label>
+          <select id="filterTrain">
+            <option value="">All Trains</option>
+            <option value="t1">CR Rajdhani</option>
+            <option value="t2">Secundarabad Shatabdi</option>
+            <option value="t3">Maharashtra Express</option>
+            <option value="t4">Mumbai-Howrah Duronto</option>
+            <option value="t5">Deccan Queen</option>
+          </select>
+        </div>
+        
+        <!-- Train 1: CR Rajdhani -->
+        <div class="train1-head" id="t1">
+          <p>Flagship Rajdhani: Mumbai to Delhi in Style</p>
+        </div>
+        <div class="train1">
+          <!-- Train Image -->
+          <div class="train1-img">
+            <div class="img1">
+              <img src="https://st.indiarailinfo.com/kjfdsuiemjvcya24/0/4/0/0/5613400/0/202301191428240346644283.jpg" alt="CR Rajdhani Express">
+            </div>
+          </div>
+          <!-- Train Information (Split into two columns) -->
+          <div class="train1-imfo">
+            <div class="train1-imfo1">
+              <p>Train Name : CR Rajdhani</p>
+              <p>Train No : 22221/22222</p>
+              <p>Train Type : Rajdhani Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>Available Classes: First AC (1A), Second AC (2A), Third AC (3A)</p>
+              <a href="CRschedule.png" download>Download Schedule</a>
+            </div>
+            <!-- Train Schedule Details -->
+            <div class="train1-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Hazrat Nizamuddin</p>
+              <p>Departure: 16:00</p>
+              <p>Arrival: 09:55 (following day)</p>
+              <p>No. of stops: 8</p>
+              <p>Avg Speed: ~86 km/h</p>
+              <p>Max Speed: 130 km/h</p>
+            </div>
+          </div>
+          <!-- Train Route Map -->
+          <div class="train1-route">
+            <div class="route1">
+              <img src="CrRoute.png" alt="CR Rajdhani Route Map">
+            </div>
+          </div>
+        </div>
+
+        <!-- Train 2: Secundarabad Shatabdi -->
+        <div class="train2-head" id="t2">
+          <p>Morning Shatabdi: Fastest Link to Secunderabad</p>
+        </div>
+        <div class="train2">
+          <div class="train2-img">
+            <div class="img2">
+              <img src="https://st.indiarailinfo.com/kjfdsuiemjvcya24/0/4/6/2/5444462/0/202208101517015748808.jpg" alt="Secundarabad Shatabdi Express">
+            </div>
+          </div>
+          <div class="train2-imfo">
+            <div class="train2-imfo1">
+              <p>Train Name : Pune – Secunderabad Shatabdi</p>
+              <p>Train No : 12025/12026</p>
+              <p>Train Type : Shatabdi Express</p>
+              <p>Operated By : South Central Railways</p>
+              <p>Available Classes: Executive Chair Car (EC), AC Chair Car (CC)</p>
+              <a href="ShatabdiSchedule.png" download>Download Schedule</a>
+            </div>
+            <div class="train2-imfo2">
+              <p>Pune Junction → Secunderabad Junction</p>
+              <p>Departure: 06:00</p>
+              <p>Arrival: 14:25</p>
+              <p>No. of stops: 5</p>
+              <p>Avg Speed: ~64 km/h</p>
+              <p>Max Speed: 110 km/h</p>
+            </div>
+          </div>
+          <div class="train2-route">
+            <div class="route2">
+              <img src="ShatabdiRoute.png" alt="Shatabdi Route Map">
+            </div>
+          </div>
+        </div>
+
+        <!-- Train 3: Maharashtra Express -->
+        <div class="train3-head" id="t3">
+          <p>The Long-Haul Connect: Maharashtra from East to West</p>
+        </div>
+        <div class="train3">
+          <div class="train3-img">
+            <div class="img3">
+              <img src="https://st.indiarailinfo.com/kjfdsuiemjvcya23/0/4/4/3/6659443/0/img8852209863.jpg" alt="Maharashtra Express">
+            </div>
+          </div>
+          <div class="train3-imfo">
+            <div class="train3-imfo1">
+              <p>Train Name : Maharashtra Express</p>
+              <p>Train No : 11039/11040</p>
+              <p>Train Type : Mail/Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>Available Classes: Sleeper (SL), Second AC (2A), Third AC (3A), General (GN)</p>
+              <a href="MHSchedule.pdf" download>Download Schedule</a>
+            </div>
+            <div class="train3-imfo2">
+              <p>Gondia Junction → Kolhapur SCSMT</p>
+              <p>Departure: 10:15</p>
+              <p>Arrival: 14:45 (next day)</p>
+              <p>No. of stops: 59</p>
+              <p>Avg Speed: ~45 km/h</p>
+              <p>Max Speed: 100 km/h</p>
+            </div>
+          </div>
+          <div class="train3-route">
+            <div class="route3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Maharashtra_Express_%28Gondia_-_Kolhapur%29_route_map.png" alt="Maharashtra Express Route Map">
+            </div>
+          </div>
+        </div>
+
+        <!-- Train 4: Mumbai-Howrah Duronto -->
+        <div class="train4-head" id="t4">
+          <p>Non-Stop Speedster: Mumbai to Kolkata</p>
+        </div>
+        <div class="train4">
+          <div class="train4-img">
+            <div class="img4">
+              <img src="https://st2.indiarailinfo.com/kjfdsuiemjvcya4/0/9/4/2/5408942/0/5605c89b36304c5798f86b539c98f6702813363.jpg" alt="Mumbai-Howrah Duronto Express">
+            </div>
+          </div>
+          <div class="train4-imfo">
+            <div class="train4-imfo1">
+              <p>Train Name : Mumbai–Howrah Duronto Express</p>
+              <p>Train No : 12261/12262</p>
+              <p>Train Type : Duronto Express</p>
+              <p>Operated By : South Eastern Railway (SER).</p>
+              <p>Available Classes: First AC (1A), Second AC (2A), Third AC (3A)</p>
+              <a href="HWHDurontoSchedule.png" download>Download Schedule</a>
+            </div>
+            <div class="train4-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Howrah Junction</p>
+              <p>Departure: 17:15</p>
+              <p>Arrival: 20:15 (next day)</p>
+              <p>No. of stops: 6</p>
+              <p>Avg Speed: ~70 km/h</p>
+              <p>Max Speed: 130 km/h</p>
+            </div>
+          </div>
+          <div class="train4-route">
+            <div class="route4">
+              <img src="HWHDuronto.png" alt="Mumbai-Howrah Duronto Route Map">
+            </div>
+          </div>
+        </div>
+
+        <!-- Train 5: Deccan Queen -->
+        <div class="train5-head" id="t5">
+          <p>Legacy on Rails: The Iconic Mumbai–Pune Deccan Queen</p>
+        </div>
+        <div class="train5">
+          <div class="train5-img">
+            <div class="img5">
+              <img src="https://www.urbanly.in/pune/wp-content/uploads/2022/02/Deccan-Queen-new-coach-arrives-in-Pune-Article-01.jpg" alt="Deccan Queen Express">
+            </div>
+          </div>
+          <div class="train5-imfo">
+            <div class="train5-imfo1">
+              <p>Train Name : Deccan Queen</p>
+              <p>Train No : 12123/12124</p>
+              <p>Train Type : Intercity/Superfast Express</p>
+              <p>Operated By : Central Railways</p>
+              <p>Available Classes: Second Sitting (2S), AC Chair Car (CC), Vistadome (EV)</p>
+              <a href="QueenSchedule.png" download>Download Schedule</a>
+            </div>
+            <div class="train5-imfo2">
+              <p>Chhatrapati Shivaji Maharaj Terminus → Pune Junction</p>
+              <p>Departure: 17:10</p>
+              <p>Arrival: 20:25</p>
+              <p>No. of stops: 4</p>
+              <p>Avg Speed: ~59 km/h</p>
+              <p>Max Speed: 105 km/h</p>
+            </div>
+          </div>
+          <div class="train5-route">
+            <div class="route5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/%28Mumbai_-_Pune%29_Express_trains_route_map.png" alt="Deccan Queen Route Map">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-sec">
+      <div class="footer-content">
+        <p>© 2025 RailXperience. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Train Filter Functionality -->
+    <script>
+      /**
+       * Train Filter Functionality
+       * Allows users to select a train from dropdown and smoothly scroll to that section
+       */
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the train filter dropdown element
+        const filterTrain = document.getElementById("filterTrain");
+        
+        // Add change event listener to dropdown
+        filterTrain.addEventListener("change", function () {
+          const selectedId = this.value; // Get selected train ID
+          
+          // If a train is selected (not "All Trains")
+          if (selectedId) {
+            const targetSection = document.getElementById(selectedId);
+            
+            // If target section exists, scroll to it smoothly
+            if (targetSection) {
+              targetSection.scrollIntoView({ 
+                behavior: "smooth", // Smooth scrolling animation
+                block: "start" // Align to top of viewport
+              });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

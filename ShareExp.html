@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Experience</title>
+    <link rel="stylesheet" href="ShareExp.css" />
+  </head>
+  <body>
+    <!-- Header Section with Branding -->
+    <header>
+      <div class="nav-logo">
+        <!-- Left Logo -->
+        <div class="logo1"></div>
+        <!-- Main Title and Subtitle -->
+        <div class="title">
+          <h2>Share Experience</h2>
+          <p>Your stories help others</p>
+        </div>
+        <!-- Right Logo -->
+        <div class="logo2"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Feedback Form Section -->
+      <div class="Exp">
+        <div class="form">
+          <form id="reviewForm">
+            <fieldset>
+              <!-- Form Title -->
+              <legend>feedback form</legend>
+
+              <!-- Personal Information Section -->
+              <label for="Name">Name</label>
+              <input
+                type="text"
+                name="Name"
+                placeholder="Enter Your Name"
+                id="Name"
+                required
+              />
+
+              <!-- Gender Selection -->
+              <label for="gender">Gender</label>
+              <input type="radio" name="gender" value="Male" id="gen1" />Male
+              <input type="radio" name="gender" value="Female" id="gen2" />Female
+              <input type="radio" name="gender" value="Others" id="gen3" />Others
+
+              <!-- Contact Information -->
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                id="email"
+                required
+              />
+
+              <!-- Train Selection -->
+              <label>Train</label><br>
+              <input type="radio" name="train" value="CR Rajdhani" id="train1" /> CR Rajdhani
+              <input type="radio" name="train" value="Secundarabad Shatabdi" id="train2" /> Secundarabad Shatabdi
+              <input type="radio" name="train" value="Maharashtra Express" id="train3" /> Maharashtra Express
+              <input type="radio" name="train" value="Mumbai-Howrah Duronto" id="train4" /> Mumbai-Howrah Duronto
+              <input type="radio" name="train" value="Deccan Queen" id="train5" /> Deccan Queen
+
+              <!-- Travel Class Selection -->
+              <label for="Travel Class">Travel Class</label>
+              <select name="class" id="class">
+                <option value="general">General</option>
+                <option value="Sleeper">Sleeper</option>
+                <option value="AC 3 Tier">AC 3 Tier</option>
+                <option value="AC 2 Tier">AC 2 Tier</option>
+                <option value="AC 1 Tier">AC 1 Tier</option>
+              </select>
+
+              <!-- Travel Date -->
+              <label for="date">Travel Date</label>
+              <input type="date" name="date" id="date" />
+
+              <!-- Rating Section (1-5 scale) -->
+              <label for="cleanliness">Cleanliness</label>
+              <input type="number" name="cleanNum" id="cleanNum" min="1" max="5" />
+
+              <label for="Punctuality">Punctuality</label>
+              <input type="number" name="PunctualityNum" id="PunctualityNum" min="1" max="5" />
+
+              <label for="Staff Behavior">Staff Behavior</label>
+              <input type="number" name="staffNum" id="staffNum" min="1" max="5" />
+
+              <label for="Food Quality">Food Quality</label>
+              <input type="number" name="foodNum" id="foodNum" min="1" max="5" />
+
+              <!-- Detailed Feedback -->
+              <label for="feedback">Your Feedback:</label>
+              <textarea
+                id="feedback"
+                name="feedback"
+                rows="5"
+                cols="40"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+
+              <!-- Submit Button -->
+              <div class="btn" id="submitBtn"><button type="button">Submit</button></div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <!-- Reviews Display Section -->
+      <section class="Reviews-sec">
+        <!-- Section Header -->
+        <div class="review-heading">
+          <p class="urbanist">RailXperiences</p>
+        </div>
+        
+        <!-- Reviews Container with Filter -->
+        <div class="review-main" id="reviewContainer">
+          <!-- Train Filter Dropdown -->
+          <label for="filterTrain" class="filter"><p>Filter by Train</p></label>
+          <select id="filterTrain">
+            <option value="All">All Trains</option>
+            <option value="CR Rajdhani">CR Rajdhani</option>
+            <option value="Secundarabad Shatabdi">Secundarabad Shatabdi</option>
+            <option value="Maharashtra Express">Maharashtra Express</option>
+            <option value="Mumbai-Howrah Duronto">Mumbai-Howrah Duronto</option>
+            <option value="Deccan Queen">Deccan Queen</option>
+          </select>
+          
+          <!-- Reviews will be dynamically injected here by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-sec">
+      <div class="footer-content">
+        <p>© 2025 RailXperience. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="ShareExp.js"></script>
+    <script src="displayReviews.js"></script>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+/**
+ * Train Explorer - Stylesheet
+ * Description: CSS for Train Explorer page featuring detailed train information
+ * Features: Train selection dropdown, detailed train cards with images and routes
+ * Author: Amit Ingle
+ * Version: 1.0
+ * Date: 2025
+ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+html {
+    background-color: #EFE1D1; /* Light beige background */
+    font-size: 62.5%; /* Sets 1rem = 10px for easier calculations */
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+}
+
+/* ===== HEADER STYLES ===== */
+.nav-logo {
+    width: 100%;
+    height: auto;
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Vertical and horizontal padding */
+}
+
+/* Logo Styles */
+.logo1, .logo2 {
+    width: 12rem;
+    height: 8rem;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover entire container */
+    background-position: center;
+}
+
+/* Left Logo - RailXperience Brand */
+.logo1 {
+    background-image: url('logo.png');
+}
+
+/* Right Logo - Maharashtra Theme */
+.logo2 {
+    background-image: url('https://img.freepik.com/premium-vector/maharashtra-day-vector-illustration-maharashtra-day_709546-557.jpg');
+}
+
+/* Title Section Styles */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #B9B4C7; /* Light purple text */
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.3rem; /* Character spacing */
+    line-height: 1.2; /* Line height for better readability */
+}
+
+.title p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    font-family: "urbanist", sans-serif;
+    letter-spacing: 0.3rem;
+    margin-top: 0.5rem; /* Space between title and subtitle */
+}
+
+/* ===== TRAIN SELECTION STYLES ===== */
+.selection {
+    width: 90%;
+    max-width: 80rem; /* Maximum width constraint */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-size: 2.2rem;
+    color: #3F2E3E; /* Dark text color */
+    font-weight: 700;
+    gap: 1.5rem; /* Space between label and dropdown */
+    margin: 2rem auto; /* Center with top/bottom margin */
+    text-align: center;
+}
+
+/* Train Filter Dropdown */
+select {
+    height: auto;
+    width: 100%;
+    max-width: 40rem; /* Maximum dropdown width */
+    font-size: 1.8rem;
+    border: 0.25rem solid #3F2E3E; /* Dark purple border */
+    border-radius: 1rem;
+    background-color: #D8B9C3; /* Light pink background */
+    padding: 1rem;
+}
+
+/* ===== TRAIN CARD STYLES ===== */
+
+/* Main Train Card Container */
+.train1, .train2, .train3, .train4, .train5 {
+    width: 90%;
+    max-width: 100rem; /* Maximum card width */
+    height: auto;
+    background-color: #b996ab; /* Light purple background */
+    display: grid;
+    grid-template-rows: repeat(3, auto); /* Three rows: image, info, route */
+    margin: 2rem auto; /* Center with vertical spacing */
+    border-radius: 3rem;
+    border: 0.4rem #3F2E3E solid; /* Dark purple border */
+    padding: 1rem; /* Internal spacing */
+}
+
+/* Train Section Header */
+.train1-head, .train2-head, .train3-head, .train4-head, .train5-head {
+    width: 80%;
+    max-width: 50rem; /* Maximum header width */
+    height: auto;
+    background-color: #b996ab;
+    border: 0.4rem #3F2E3E solid;
+    border-top-left-radius: 6rem; /* Asymmetrical border radius */
+    border-bottom-right-radius: 6rem;
+    margin: 1.5rem auto; /* Center with vertical spacing */
+    padding: 1.5rem;
+}
+
+.train1-head p, .train2-head p, .train3-head p, .train4-head p, .train5-head p {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #331D2C; /* Dark text color */
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    line-height: 1.3; /* Improved readability */
+}
+
+/* Train Card Sections (Image, Info, Route) */
+.train1-img, .train1-imfo, .train1-route,
+.train2-img, .train2-imfo, .train2-route,
+.train3-img, .train3-imfo, .train3-route,
+.train4-img, .train4-imfo, .train4-route,
+.train5-img, .train5-imfo, .train5-route {
+    background-color: #b996ab; /* Match card background */
+    margin: 1.5rem; /* Section spacing */
+}
+
+/* Train Information Grid Layout */
+.train1-imfo, .train2-imfo, .train3-imfo, .train4-imfo, .train5-imfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 2rem; /* Space between columns */
+}
+
+/* Train Information Cards */
+.train1-imfo1, .train1-imfo2,
+.train2-imfo1, .train2-imfo2,
+.train3-imfo1, .train3-imfo2,
+.train4-imfo1, .train4-imfo2,
+.train5-imfo1, .train5-imfo2 {
+    background-color: #D8B9C3; /* Light pink background */
+    border-radius: 2.5rem;
+    border: 0.3rem #3F2E3E solid;
+    padding: 1.5rem;
+}
+
+/* Train Image Container */
+.train1-img, .train2-img, .train3-img, .train4-img, .train5-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Train Image Styling */
+.img1, .img2, .img3, .img4, .img5 {
+    width: 80%;
+    max-width: 50rem; /* Maximum image width */
+    height: 25rem;
+    border-radius: 3rem;
+    border: 0.4rem #3F2E3E solid;
+    overflow: hidden; /* Hide image overflow */
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img, .img5 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Train Route Map Container */
+.train1-route, .train2-route, .train3-route, .train4-route, .train5-route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Route Map Styling */
+.route1, .route2, .route3, .route4, .route5 {
+    border-radius: 3rem;
+    border: 0.4rem #3F2E3E solid;
+    overflow: hidden; /* Hide map overflow */
+}
+
+.route1, .route2, .route3, .route4, .route5 {
+    width: 80%;
+    max-width: 60rem; /* Maximum route map width */
+    height: 30rem;
+}
+
+.route1 img, .route2 img, .route3 img, .route4 img, .route5 img {
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Train Information Text Styles */
+.train1-imfo1 p, .train1-imfo2 p, .train1-imfo1 a,
+.train2-imfo1 p, .train2-imfo2 p, .train2-imfo1 a,
+.train3-imfo1 p, .train3-imfo2 p, .train3-imfo1 a,
+.train4-imfo1 p, .train4-imfo2 p, .train4-imfo1 a,
+.train5-imfo1 p, .train5-imfo2 p, .train5-imfo1 a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: justify; /* Justified text alignment */
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.4; /* Improved readability */
+    margin-bottom: 0.8rem; /* Space between paragraphs */
+}
+
+/* Download Link Styles */
+.train1-imfo1 a, .train2-imfo1 a, .train3-imfo1 a, .train4-imfo1 a, .train5-imfo1 a {
+    color: rgb(65, 65, 208); /* Blue link color */
+    text-decoration: underline; /* Underline for clickability */
+}
+
+/* ===== FOOTER STYLES ===== */
+.footer-content {
+    width: 100%;
+    height: auto;
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIUM SCREENS (768px and below) ===== */
+@media (max-width: 768px) {
+    /* Header mobile adjustments */
+    .nav-logo {
+        padding: 1rem;
+    }
+    
+    .logo1, .logo2 {
+        width: 10rem;
+        height: 6rem;
+    }
+    
+    .title h2 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .title p {
+        font-size: 1.8rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    /* Selection dropdown mobile adjustments */
+    .selection {
+        font-size: 1.8rem;
+        width: 95%; /* Slightly wider on mobile */
+    }
+    
+    select {
+        font-size: 1.6rem;
+    }
+    
+    /* Train card mobile adjustments */
+    .train1, .train2, .train3, .train4, .train5 {
+        width: 95%; /* Wider on mobile */
+        border-radius: 2rem; /* Slightly smaller border radius */
+    }
+    
+    .train1-head p, .train2-head p, .train3-head p, .train4-head p, .train5-head p {
+        font-size: 2rem; /* Smaller font size */
+    }
+    
+    /* Switch to single column layout on mobile */
+    .train1-imfo, .train2-imfo, .train3-imfo, .train4-imfo, .train5-imfo {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1.5rem; /* Reduced gap */
+    }
+    
+    /* Smaller images on mobile */
+    .img1, .img2, .img3, .img4, .img5 {
+        height: 20rem;
+    }
+    
+    /* Smaller route maps on mobile */
+    .route1, .route2, .route3, .route4, .route5 {
+        height: 25rem;
+    }
+    
+    /* Smaller text on mobile */
+    .train1-imfo1 p, .train1-imfo2 p, .train1-imfo1 a,
+    .train2-imfo1 p, .train2-imfo2 p, .train2-imfo1 a,
+    .train3-imfo1 p, .train3-imfo2 p, .train3-imfo1 a,
+    .train4-imfo1 p, .train4-imfo2 p, .train4-imfo1 a,
+    .train5-imfo1 p, .train5-imfo2 p, .train5-imfo1 a {
+        font-size: 1.4rem;
+    }
+}

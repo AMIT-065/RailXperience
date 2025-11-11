@@ -1,0 +1,600 @@
+/**
+ * RailXperience - Main Stylesheet
+ * Description: CSS for RailXperience website featuring Indian Railways information and reviews
+ * Author: Amit Ingle
+ * Version: 1.0
+ * Date: 2025
+ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+html {
+    background-color: #EFE1D1; /* Light beige background */
+    font-size: 62.5%; /* Sets 1rem = 10px for easier calculations */
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+}
+
+/* ===== NAVIGATION STYLES ===== */
+.nav {
+    width: 100%;
+    height: auto;
+    min-height: 10rem; /* Minimum height for navigation */
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Vertical and horizontal padding */
+}
+
+/* Logo Styles */
+.logo {
+    width: 10rem;
+    height: 8rem;
+    border-radius: 1.5rem;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover entire container */
+    background-position: center;
+}
+
+/* Main Title Styles */
+.title p {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #B9B4C7; /* Light purple text */
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.3rem; /* Character spacing */
+    text-align: center;
+    line-height: 1.2; /* Line height for better readability */
+}
+
+/* Navigation Bar Container */
+.nav-bar {
+    width: auto;
+    max-width: 100rem; /* Maximum width constraint */
+}
+
+/* Navigation List Styles */
+.nav-bar ul {
+    width: 100%;
+    height: auto;
+    min-height: 6rem;
+    background-color: #A78295; /* Medium purple background */
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.nav-bar ul li {
+    list-style: none; /* Remove default list styling */
+    margin: 0.5rem;
+}
+
+/* Navigation Link Styles */
+.nav-bar ul li a {
+    position: relative; /* For pseudo-element positioning */
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+/* Navigation Link Hover Effect */
+.nav-bar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 0%; /* Start with no width */
+    height: 0.2rem;
+    background-color: #331D2C; /* Dark purple underline */
+    transition: width 0.3s linear; /* Smooth width transition */
+}
+
+.nav-bar ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* ===== HERO SECTION STYLES ===== */
+.hero {
+    width: 90%;
+    max-width: 120rem; /* Maximum width constraint */
+    height: auto;
+    background-color: #b996ab; /* Light purple background */
+    border-radius: 4rem;
+    margin: 2rem auto; /* Center with top/bottom margin */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.4rem #3F2E3E solid; /* Dark purple border */
+    padding: 2rem;
+    flex-wrap: wrap; /* Responsive wrapping */
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 60rem; /* Content width limit */
+    height: auto;
+}
+
+/* Hero Image Container */
+.hero-img {
+    width: 100%;
+    max-width: 35rem;
+    height: 30rem;
+    border: 0.4rem #3F2E3E solid;
+    border-radius: 4rem;
+    overflow: hidden; /* Hide image overflow */
+    margin: 1rem;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover container while maintaining aspect ratio */
+}
+
+/* Hero Content Text Styles */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #331D2C; /* Dark text color */
+    font-family: "Urbanist", sans-serif;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    line-height: 2.4rem; /* Improved readability */
+    margin-bottom: 3rem;
+    text-align: justify; /* Justified text alignment */
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 2rem; /* Space between buttons */
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap buttons on small screens */
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    background-color: #3F2E3E; /* Dark purple background */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    transition: all 0.3s ease; /* Smooth hover transition */
+    text-align: center;
+    min-width: 12rem; /* Minimum button width */
+}
+
+.cta-buttons a:hover {
+    background-color: #5c3c56; /* Lighter purple on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* ===== PURPOSE SECTION STYLES ===== */
+.purpose {
+    width: 90%;
+    max-width: 120rem;
+    height: auto;
+    background-color: #EFE1D1; /* Light beige background */
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between children */
+}
+
+/* Purpose Section Header */
+.purpose-head {
+    width: 90%;
+    max-width: 50rem;
+    height: auto;
+    background-color: #b996ab;
+    border: 0.4rem #3F2E3E solid;
+    border-top-left-radius: 6rem; /* Asymmetrical border radius */
+    border-bottom-right-radius: 6rem;
+    padding: 1.5rem;
+}
+
+.purpose-head p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Purpose Cards Container */
+.purpose-body {
+    width: 100%;
+    height: auto;
+    background-color: #D8B9C3; /* Light pink background */
+    border: 0.4rem #3F2E3E solid;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive card wrapping */
+    padding: 2rem;
+}
+
+/* Individual Purpose Cards */
+.purpose1, .purpose2, .purpose3 {
+    width: 100%;
+    max-width: 30rem; /* Maximum card width */
+    height: auto;
+    margin: 1rem;
+}
+
+/* Purpose Card Images */
+.img1, .img2, .img3 {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%; /* Circular images */
+    margin: 1.5rem auto; /* Center with top/bottom margin */
+    border: 0.4rem #3F2E3E solid;
+}
+
+/* Background Images for Purpose Cards */
+.img1 {
+    background-image: url('https://as1.ftcdn.net/v2/jpg/06/46/37/04/1000_F_646370472_by6Z8xzT35r6yqEWTvoQgnNG2x4d2mdz.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    background-image: url('https://thumbs.dreamstime.com/b/user-reviews-online-customer-feedback-review-experience-rating-concept-user-client-service-message-user-reviews-online-customer-147323928.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img3 {
+    background-image: url('https://trustmary.com/wp-content/uploads/2022/05/review-stats-1-791x1024.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Purpose Card Information */
+.imfo1, .imfo2, .imfo3 {
+    width: 90%;
+    height: auto;
+    background-color: #D8B9C3;
+    margin: 1.5rem auto;
+}
+
+.imfo1 p, .imfo2 p, .imfo3 p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.4;
+}
+
+/* ===== TARGET AUDIENCE SECTION STYLES ===== */
+.train-layout {
+    width: 95%;
+    max-width: 120rem;
+    height: auto;
+    background-color: #EFE1D1;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Header */
+.train-head {
+    width: 100%;
+    height: auto;
+    background-color: #A78295;
+    border: 0.4rem #3F2E3E solid;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding: 1.5rem;
+}
+
+/* Cards Container (Boggie - train carriage metaphor) */
+.boggie {
+    width: 100%;
+    height: auto;
+    background-color: #b996ab;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-left: 0.4rem #3F2E3E solid;
+    border-right: 0.4rem #3F2E3E solid;
+    border-bottom: 0.4rem #3F2E3E solid;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding: 2rem;
+    flex-wrap: wrap; /* Responsive card wrapping */
+}
+
+/* Individual Target Audience Cards */
+.target1, .target2, .target3 {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    min-height: 35rem; /* Minimum card height */
+    background-color: #b996ab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.train-head p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #331D2C;
+    font-family: "urbanist", sans-serif;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Target Card Images */
+.target-img1, .target-img2, .target-img3 {
+    width: 100%;
+    max-width: 25rem;
+    height: 20rem;
+    border-radius: 3rem;
+    border: 0.4rem #331D2C solid;
+    margin-bottom: 1.5rem;
+}
+
+/* Background Images for Target Cards */
+.target-img1 {
+    background-image: url('https://www.travelandleisure.com/thmb/PdC77BTplEvKvAscQXZXc3q8BWE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/train-passenger-windows-TRAINMISTAKES0820-88b7aa7a172f45f881a2944ad637298f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.target-img2 {
+    background-image: url('https://t3.ftcdn.net/jpg/06/72/55/64/360_F_672556497_YZW1aibs9MYIRFEZwn5faNvPtaplioBR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.target-img3 {
+    background-image: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1FTH2a.img?w=768&h=432&m=6');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Target Card Information */
+.target-imfo1, .target-imfo2, .target-imfo3 {
+    width: 100%;
+    height: auto;
+    background-color: #b996ab;
+    text-align: center;
+}
+
+.target-imfo1 p, .target-imfo2 p, .target-imfo3 p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.4;
+    margin: 0.5rem 0;
+}
+
+.target-imfo1 h2, .target-imfo2 h2, .target-imfo3 h2 {
+    color: #331D2C;
+    font-family: "Urbanist", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ===== ANIMATIONS ===== */
+/**
+ * Fade In Up Animation
+ * Creates smooth entrance animation for elements
+ */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem); /* Start position below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Apply animations to target cards */
+.target1,
+.target2,
+.target3 {
+    animation: fadeInUp 1s ease forwards; /* 1 second ease animation */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease; /* Hover transition */
+}
+
+/* Staggered animation delays for sequential appearance */
+.target1 {
+    animation-delay: 0.2s;
+}
+
+.target2 {
+    animation-delay: 0.4s;
+}
+
+.target3 {
+    animation-delay: 0.6s;
+}
+
+/* ===== FOOTER STYLES ===== */
+.footer-content {
+    width: 100%;
+    height: auto;
+    background-color: #3F2E3E; /* Dark purple background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-content p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIUM SCREENS (768px and below) ===== */
+@media (max-width: 768px) {
+    /* Navigation adjustments for mobile */
+    .nav {
+        flex-direction: column; /* Stack logo, title, and nav vertically */
+        gap: 1.5rem; /* Space between stacked items */
+        padding: 1rem;
+    }
+    
+    .logo {
+        width: 8rem;
+        height: 6rem;
+    }
+    
+    .title p {
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .nav-bar {
+        width: 100%;
+        max-width: none; /* Remove max-width constraint */
+    }
+    
+    .nav-bar ul {
+        min-height: 5rem;
+    }
+    
+    .nav-bar ul li a {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        border-radius: 3rem;
+        padding: 1.5rem;
+    }
+    
+    .hero-content, .hero-img {
+        width: 100%;
+        max-width: none; /* Full width on mobile */
+    }
+    
+    .hero-img {
+        height: 25rem;
+        order: -1; /* Move image above content on mobile */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-buttons {
+        gap: 1.5rem;
+    }
+    
+    .cta-buttons a {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    /* Purpose section mobile adjustments */
+    .purpose-head p {
+        font-size: 2rem;
+    }
+    
+    .img1, .img2, .img3 {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .imfo1 p, .imfo2 p, .imfo3 p {
+        font-size: 1.4rem;
+    }
+    
+    /* Target audience section mobile adjustments */
+    .train-head p {
+        font-size: 2rem;
+    }
+    
+    .target1, .target2, .target3 {
+        min-height: 30rem;
+    }
+    
+    .target-img1, .target-img2, .target-img3 {
+        height: 15rem;
+    }
+    
+    .target-imfo1 h2, .target-imfo2 h2, .target-imfo3 h2 {
+        font-size: 2rem;
+    }
+    
+    .target-imfo1 p, .target-imfo2 p, .target-imfo3 p {
+        font-size: 1.4rem;
+    }
+    
+    /* Footer mobile adjustments */
+    .footer-content p {
+        font-size: 1.6rem;
+    }
+}
